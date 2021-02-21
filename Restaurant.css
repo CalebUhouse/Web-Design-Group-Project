@@ -41,3 +41,17 @@ footer
 {
     grid-area: footer;
 }
+
+menu
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px 5px;
+}
+
+.menu-category
+{
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bold;
+}
