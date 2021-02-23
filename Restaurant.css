@@ -42,7 +42,7 @@ footer
     grid-area: footer;
 }
 
-menu
+.menu
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
