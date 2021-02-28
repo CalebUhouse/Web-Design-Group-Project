@@ -77,3 +77,10 @@ div.navigation-bar
 {
     font-size: 30px;
 }
+
+li
+{
+    list-style: none;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
