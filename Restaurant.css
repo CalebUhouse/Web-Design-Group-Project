@@ -44,6 +44,7 @@ aside
 footer
 {
     grid-area: footer;
+    border: 2px solid black;
 }
 
 .menu
@@ -51,6 +52,11 @@ footer
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px 5px;
+}
+
+.kids-menu
+{
+    border: 2px solid black;
 }
 
 .menu-category
