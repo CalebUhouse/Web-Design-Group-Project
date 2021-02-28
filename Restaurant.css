@@ -24,6 +24,9 @@ header
 nav
 {
     grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 2px solid black;
 }
 
 /* Main area for text*/
@@ -55,4 +58,9 @@ footer
     text-decoration: underline;
     font-size: larger;
     font-weight: bold;
+}
+
+div.navigation-bar
+{
+    text-align: center;
 }
