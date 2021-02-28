@@ -60,18 +60,20 @@ footer
     font-weight: bold;
 }
 
+.menu-item
+{
+    text-decoration: none;
+    font-size: normal;
+    font-weight: none;
+}
+
 div.navigation-bar
 {
     text-align: center;
     font-size: 20px;
 }
 
-.menu-header
+.top-header
 {
     font-size: 30px;
-}
-
-li
-{
-    list-style: none;
 }
