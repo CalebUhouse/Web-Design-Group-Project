@@ -24,3 +24,21 @@ function GetMenu( MenuFileName, OutputID )
     xmlhttp.send();
 }
 
+function StartDrag( CurrentEvent )
+{
+    CurrentEvent.dataTransfer.setData( "text/html", CurrentEvent.target.id );
+}
+
+function AllowDrop( CurrentEvent )
+{
+    CurrentEvent.preventDefault();
+}
+
+function Drop( CurrentEvent, DestinationID )
+{
+    var DataID = CurrentEvent.dataTransfer.getData( "text/html" );
+
+    document.getElementById( DestinationID ).appendChild( document.getElementById( DataID ).cloneNode( true ));
+        
+    CurrentEvent.preventDefault();
+}
