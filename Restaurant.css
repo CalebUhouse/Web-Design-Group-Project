@@ -108,3 +108,27 @@ li
     margin-left: 20px;
     margin-bottom: 30px;
 }
+
+/*
+these 3 are temporary, used from the labs
+*/
+div.grid-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px;
+}
+
+div.listbox
+{
+    border: 2px solid blue;
+    background-color: lightgray;
+    min-height:200px;
+}
+
+div.item
+{
+    border: 1px solid black;
+    margin: 5px 5px 5px 5px;
+    background: lightgreen;
+}
