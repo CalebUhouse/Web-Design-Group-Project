@@ -1,5 +1,6 @@
 function GetMenu( MenuFileName, OutputID )
 {
+    ClearTakeout();
     var xmlhttp;
 
     if ( window.XMLHttpRequest )
@@ -41,4 +42,14 @@ function Drop( CurrentEvent, DestinationID )
     document.getElementById( DestinationID ).appendChild( document.getElementById( DataID ).cloneNode( true ));
         
     CurrentEvent.preventDefault();
+}
+
+// Clears the other takeout boxes before executing the GetMenu function so that only one section displays at a time
+function ClearTakeout() 
+{
+    document.getElementById( 'appetizers' ).innerHTML = "<p></p>";
+    document.getElementById( 'soups-and-salads' ).innerHTML = "<p></p>";
+    document.getElementById( 'entrees' ).innerHTML = "<p></p>";
+    document.getElementById( 'desserts' ).innerHTML = "<p></p>";
+    document.getElementById( 'drinks' ).innerHTML = "<p></p>";
 }
