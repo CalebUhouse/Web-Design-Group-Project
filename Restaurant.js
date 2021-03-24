@@ -1,6 +1,6 @@
 function GetMenu( MenuFileName, OutputID )
 {
-    ClearTakeout();
+    TakeoutFocus();
     var xmlhttp;
 
     if ( window.XMLHttpRequest )
