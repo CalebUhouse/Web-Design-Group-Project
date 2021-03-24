@@ -45,7 +45,7 @@ function Drop( CurrentEvent, DestinationID )
 }
 
 // Clears the other takeout boxes before executing the GetMenu function so that only one section displays at a time
-function ClearTakeout() 
+function TakeoutFocus() 
 {
     document.getElementById( 'appetizers' ).innerHTML = "<p></p>";
     document.getElementById( 'soups-and-salads' ).innerHTML = "<p></p>";
