@@ -1,3 +1,4 @@
+// Retreives the HTML file for the desired menu section
 function GetMenu( MenuFileName, OutputID )
 {
     TakeoutFocus();
