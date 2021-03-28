@@ -86,7 +86,7 @@ ul.grid-container
 
 ul.cart
 {
-    min-height:200px;
+    min-height: 100%;
 }
 
 div.navigation-bar
