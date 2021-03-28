@@ -77,11 +77,11 @@ footer
     font-weight: bold;
 }
 
-.menu-item
+ul.grid-container
 {
-    text-decoration: none;
-    font-size: normal;
-    font-weight: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px;
 }
 
 div.navigation-bar
@@ -102,26 +102,9 @@ li
     margin-bottom: 30px;
 }
 
-/*
-these 3 are temporary, used from the labs
-*/
-div.grid-container
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px 10px;
-}
-
-div.listbox
-{
-    border: 2px solid blue;
-    background-color: lightseagreen;
-    min-height:200px;
-}
-
-div.item
+li.item
 {
     border: 1px solid black;
-    margin: 5px 5px 5px 5px;
+    margin: 6px 6px 6px 6px;
     background-color: lightskyblue;
 }
