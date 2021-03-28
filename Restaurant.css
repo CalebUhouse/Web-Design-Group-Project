@@ -84,6 +84,11 @@ ul.grid-container
     grid-gap: 10px 10px;
 }
 
+ul.cart
+{
+    min-height:200px;
+}
+
 div.navigation-bar
 {
     text-align: center;
