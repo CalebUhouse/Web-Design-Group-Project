@@ -48,9 +48,10 @@ function Drop( CurrentEvent, DestinationID )
 // Clears the other takeout boxes before executing the GetMenu function so that only one section displays at a time
 function TakeoutFocus() 
 {
-    document.getElementById( 'appetizers' ).innerHTML = "<p></p>";
-    document.getElementById( 'soups-and-salads' ).innerHTML = "<p></p>";
-    document.getElementById( 'entrees' ).innerHTML = "<p></p>";
-    document.getElementById( 'desserts' ).innerHTML = "<p></p>";
-    document.getElementById( 'drinks' ).innerHTML = "<p></p>";
+    document.getElementById( 'appetizers' ).innerHTML = "<li></li>";
+    document.getElementById( 'soups-and-salads' ).innerHTML = "<li></li>";
+    document.getElementById( 'entrees' ).innerHTML = "<li></li>";
+    document.getElementById( 'kids' ).innerHTML = "<li></li>";
+    document.getElementById( 'desserts' ).innerHTML = "<li></li>";
+    document.getElementById( 'drinks' ).innerHTML = "<li></li>";
 }
