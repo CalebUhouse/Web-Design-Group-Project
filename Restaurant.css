@@ -113,3 +113,9 @@ li.item
     margin: 6px 6px 6px 6px;
     background-color: lightskyblue;
 }
+
+.pricebox
+{
+    display: flex;
+    flex-wrap: wrap;
+}
