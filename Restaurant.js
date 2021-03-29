@@ -43,6 +43,8 @@ function Drop( CurrentEvent, DestinationID )
     document.getElementById( DestinationID ).appendChild( document.getElementById( DataID ).cloneNode( true ));
         
     CurrentEvent.preventDefault();
+
+    CalculatePrice();
 }
 
 // Clears the other takeout boxes before executing the GetMenu function so that only one section displays at a time
@@ -73,5 +75,5 @@ function CalculatePrice()
 
     // Puts total in Order Total box
     document.getElementById( 'order-total' ).innerHTML = FormattedTotal
-    
+
 }
