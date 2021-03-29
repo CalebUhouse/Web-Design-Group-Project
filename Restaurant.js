@@ -55,3 +55,20 @@ function TakeoutFocus()
     document.getElementById( 'desserts' ).innerHTML = "<li></li>";
     document.getElementById( 'drinks' ).innerHTML = "<li></li>";
 }
+
+function CalculatePrice()
+{
+    var PriceList = document.querySelectorAll( "ul[id=\"rightlist\"] li" );
+
+    var Total = 0.0;
+
+    // total the price values
+    for( var i=0; i<PriceList.length; i++ )
+    {
+    Price     +=  PriceList[i].getAttribute( "data-price" );
+    }
+
+    document.querySelector( "ul[id=\"destination\"] + p" ).innerHTML = "Your Total is: " + Total;
+
+}
+
