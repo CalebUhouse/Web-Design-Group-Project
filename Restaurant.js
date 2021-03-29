@@ -65,10 +65,13 @@ function CalculatePrice()
     // total the price values
     for( var i=0; i<PriceList.length; i++ )
     {
-    Price     +=  PriceList[i].getAttribute( "data-price" );
+    Total   +=  Number(PriceList[i].getAttribute( "data-price" ) );
     }
 
-    document.querySelector( "ul[id=\"destination\"] + p" ).innerHTML = "Your Total is: " + Total;
+    // Sets value to USD
+    var FormattedTotal = Total.toLocaleString( 'en-US', {style: "currency", currency: "USD"} );
 
+    // Puts total in Order Total box
+    document.getElementById( 'order-total' ).innerHTML = FormattedTotal
+    
 }
-
