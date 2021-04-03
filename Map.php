@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Map Page</title>
-    <link href="Restaurant.css" type="text/css" rel="Stylesheet">
-</head>
-<body>
+<?php
 
-    <main>
+  require "Restaurant.inc";
 
-        <header>
-            <h1 class="section-header">
-                Redrock Tavern
-            </h1> 
-        </header>
+  HTMLStart( "Map Page" );
+
+  HTMLHeader();
+
+?>
 
         <section>
             <p class="section-header top-header">Where to Find Us</p>
@@ -91,7 +84,6 @@
             </p>
         </footer>
 
-    </main>
-
-</body>
-</html>
+<?php
+  HTMLEnd();
+?>
