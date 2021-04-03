@@ -21,6 +21,7 @@
     <meta charset="UTF-8">
     <title><?php echo $Title ?></title>
     <link href="Restaurant.css" type="text/css" rel="Stylesheet" />
+    <script src="Restaurant.js" defer></script>
   </head>
   <body>
     <main>
