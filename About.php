@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>About Page</title>
-    <link href="Restaurant.css" type="text/css" rel="Stylesheet" />
-  </head>
-  <body>
-    <main>
+<?php
 
-      <header class="section-header">
-        <h1>Redrock Tavern</h1>
-      </header>
+  require "Restaurant.inc";
+
+  HTMLStart( "About Page" );
+
+  HTMLHeader();
+
+?>
 
       <nav>
         <div class="navigation-bar">
@@ -84,6 +80,7 @@
                 Sunday: Closed
             </p>
       </footer>
-    </main>
-  </body>
-</html>
+
+<?php
+  HTMLEnd();
+?>
