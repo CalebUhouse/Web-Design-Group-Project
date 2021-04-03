@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Page</title>
-    <link href="Restaurant.css" type="text/css" rel="Stylesheet">
-</head>
-<body>
-<main>
-    <header class="section-header">
-                <h1>
-                    Redrock Tavern
-                </h1>
-    </header>
+<?php
+
+  require "Restaurant.inc";
+
+  HTMLStart( "Contact Us Page" );
+
+  HTMLHeader();
+
+?>
 
     <section>
         <p class="section-header top-header">
@@ -84,6 +79,7 @@
                 Sunday: Closed
             </p>
         </footer>
-</main>
-</body>
-</html>
+
+<?php
+  HTMLEnd();
+?>
