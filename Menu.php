@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Menu Page</title>
-    <link href="Restaurant.css" type="text/css" rel="Stylesheet">
-</head>
-<body>
-    
-    <main>
+<?php
 
-        <header>
-            <h1 class="section-header">
-                Redrock Tavern
-            </h1> 
-        </header>
+  require "Restaurant.inc";
+
+  HTMLStart( "Menu Page" );
+
+  HTMLHeader();
+
+?>
 
         <section>
             <p class="section-header top-header">Redrock Tavern Menu</p>
@@ -134,7 +127,6 @@
             </p>
         </footer>
 
-    </main>
-
-</body>
-</html>
+<?php
+  HTMLEnd();
+?>
