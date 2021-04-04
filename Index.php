@@ -21,15 +21,9 @@
         </section>  
         
 
-        <aside class="section-header">
-            <h2>
-                Promotional deals!
-            </h2>
-            <p>
-                2 Drinks for the price of 2 Drinks!
-            </p>
-        </aside>
-
+<?php
+    PageSideBar();
+?>
         <nav>
             <div class="navigation-bar">
                 <a title="Home" href="Index.php">Home</a>
@@ -51,32 +45,9 @@
             </div>
         </nav>
 
-        <footer>
-         <p class="section-header">
-                ~ Hours of Operation ~
-            </p>
-            <p class="section-header">
-                Monday: 11am - 8:30pm
-            </p>
-            <p class="section-header">
-                Tuesday: 11am - 8:30pm
-            </p>
-            <p class="section-header">
-                Wednesday: 11am - 8:30pm
-            </p>
-            <p class="section-header">
-                Thursday: 11am - 8:30pm
-            </p>
-            <p class="section-header">
-                Friday: 11am - 9pm
-            </p>
-            <p class="section-header">
-                Saturday: 11am - 9pm
-            </p>
-            <p class="section-header">
-                Sunday: Closed
-            </p>
-      </footer>
+<?php
+  PageFooter();
+?>
 
 <?php
   HTMLEnd();
