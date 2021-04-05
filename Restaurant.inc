@@ -38,7 +38,8 @@
 
 <?php
   }
-?><?php
+?>
+<?php
     function PageSideBar()
     {
 ?>
@@ -76,9 +77,6 @@
                 <a title="Contact Page" href="Takeout.php">Order Takeout</a>
             </div>
         </nav>
-<?php
-    }
-?>
 
 <?php 
     }
@@ -111,9 +109,6 @@
                 Sunday: Closed
             </p>
       </footer>
-<?php
-    }
-?>
 <?php
     }
 ?>
