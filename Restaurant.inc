@@ -50,6 +50,36 @@
             2 Drinks for the price of 2 Drinks!
         </p>
     </aside>
+
+<?php 
+    }
+    function PageNav()
+    {
+?>
+      <nav>
+            <div class="navigation-bar">
+                <a title="Home" href="Index.php">Home</a>
+            </div>
+            <div class="navigation-bar">
+                <a title="About" href="About.php">About</a>
+            </div>
+            <div class="navigation-bar">
+                <a title="Menu" href="Menu.php">Menu</a>
+            </div>
+            <div class="navigation-bar">
+                <a title="Map Page" href="Map.php">Find Us</a>
+            </div>
+            <div class="navigation-bar">
+                <a title="Contact Page" href="Contact Us.php">Contact Us</a>
+            </div>
+            <div class="navigation-bar">
+                <a title="Contact Page" href="Takeout.php">Order Takeout</a>
+            </div>
+        </nav>
+<?php
+    }
+?>
+
 <?php 
     }
     function PageFooter()
