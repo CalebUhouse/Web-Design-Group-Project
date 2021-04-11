@@ -1,4 +1,4 @@
-<<?php
+<?php
 
   require "Restaurant.inc";
 
@@ -6,9 +6,6 @@
 
   HTMLHeader();
 
-?>
-
-<?php
     PageNav();
 ?>
       
@@ -30,7 +27,6 @@
   PageSideBar();
 
   PageFooter();
-?>
-<?php
+
   HTMLEnd();
 ?>
