@@ -25,16 +25,10 @@
 
 <?php
     PageSideBar();
-?>
 
-<?php
     PageNav();
-?>
 
-<?php
     PageFooter();
-?>
 
-<?php
   HTMLEnd();
 ?>
