@@ -71,17 +71,11 @@
         </section>
 
 <?php
-  PageSideBar();
-?>
+    PageSideBar();
 
-<?php
     PageNav();
-?>
 
-<?php
-  PageFooter();
-?>
+    PageFooter();
 
-<?php
   HTMLEnd();
 ?>
