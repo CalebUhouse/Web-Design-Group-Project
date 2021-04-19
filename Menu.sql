@@ -56,7 +56,7 @@ INSERT INTO `menu_items` (`id`, `category`, `description`, `price`) VALUES
 ('item33', 'Drinks', 'Sweet Tea', '1.00'),
 ('item34', 'Drinks', 'Unsweetened Tea', '1.00');
 
-('item20', 'Desserts', 'Ice Cream Bowl', '5.00'),
+
 --
 -- Indexes for dumped tables
 --
