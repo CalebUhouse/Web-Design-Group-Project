@@ -150,9 +150,6 @@
     if ( $Results )
     {
 
-        // start the menu table
-        echo "<table class=\"menu-table\">\n";
-
         // loop through the results
         //      the fecth_row method returns an array of the column
         //      data - one item in the array for each column in the
@@ -162,8 +159,6 @@
         //      there are no more rows
         while( $Row = $Results->fetch_row() )
         {
-            // add  table row
-            echo "   <tr>\n";
 
             // add item
             echo "<td class=\"menu-item\">".$Row[0]."</td><td class=\"menu-price\">$".$Row[1]."</td>\n";
@@ -172,14 +167,7 @@
 
             // <td class="menu-item">NY Style Mini Pizza</td><td class="menu-price">$4.00</td>            
 
-
-            // end of table row
-            echo "   </tr>\n";
         }
-
-
-        // end
-        echo "</table>\n";
 
     }
     else
