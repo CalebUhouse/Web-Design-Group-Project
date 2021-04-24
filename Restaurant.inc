@@ -112,7 +112,7 @@
 <?php
     }
 
-    function Menu( $Category )
+function Menu( $Category, $MenuType )
 {
     // set the connection information
     //      dbase is the server name on the penguin network
@@ -138,7 +138,7 @@
     }
 
     // make a select statement to get data from the database
-    $SQL = "select description, price from menu_items where category='".$Category."';";    
+    $SQL = "select description, price, id from menu_items where category='".$Category."';";    
     
     // execute the query
     //      use the query method of the $Connection object
@@ -160,13 +160,21 @@
         while( $Row = $Results->fetch_row() )
         {
 
+            if ( $MenuType == "Takeout" )
+            {
+                // <li id="item01" class="item" draggable="true" ondragstart="StartDrag( event );" data-price="1.00">Bread Roll Basket - Comes with 4 buttered bread rolls<p>$1.00</p></li>
+
+                echo " id=\"".$Row[2]."\" draggable=\"true\" ondragstart=\"StartDrag( event );\" data-price=\"".$Row[1]."\"";
+            }
+            
+            echo ">\n";
+
             // add item
             echo "<td class=\"menu-item\">".$Row[0]."</td><td class=\"menu-price\">$".$Row[1]."</td>\n";
 
 
 
-            // <td class="menu-item">NY Style Mini Pizza</td><td class="menu-price">$4.00</td>            
-
+            // <li>Bread Roll Basket - Comes with 4 buttered bread rolls</li>            
         }
 
     }
