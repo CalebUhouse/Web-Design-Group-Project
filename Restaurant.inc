@@ -151,7 +151,7 @@ function Menu( $Category, $MenuType )
     {
 
         // loop through the results
-        //      the fecth_row method returns an array of the column
+        //      the fetch_row method returns an array of the column
         //      data - one item in the array for each column in the
         //      select statement.
         //
@@ -160,21 +160,23 @@ function Menu( $Category, $MenuType )
         while( $Row = $Results->fetch_row() )
         {
 
+            // add menu item
+            echo "  <li";
+
             if ( $MenuType == "Takeout" )
             {
+                // add menu item with drag and drop data into takeout menu
                 // <li id="item01" class="item" draggable="true" ondragstart="StartDrag( event );" data-price="1.00">Bread Roll Basket - Comes with 4 buttered bread rolls<p>$1.00</p></li>
 
-                echo " id=\"".$Row[2]."\" draggable=\"true\" ondragstart=\"StartDrag( event );\" data-price=\"".$Row[1]."\"";
+                echo " id=\"".$Row[0]."\" class=\"item\" draggable=\"true\" ondragstart=\"StartDrag( event );\" data-price=\"".$Row[4]."\">".$Row[3]"<p>$".$Row[4]."</p></li>";
             }
-            
-            echo ">\n";
-
-            // add item
-            echo "<td class=\"menu-item\">".$Row[0]."</td><td class=\"menu-price\">$".$Row[1]."</td>\n";
-
-
-
-            // <li>Bread Roll Basket - Comes with 4 buttered bread rolls</li>            
+            else
+            {
+                // add menu item without drag and drop data into regular menu
+                // <li>Bread Roll Basket - Comes with 4 buttered bread rolls</li>
+                echo ">".$Row[3]."</li>";
+            }
+          
         }
 
     }
