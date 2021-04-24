@@ -1,4 +1,4 @@
-// Retreives the HTML file for the desired menu section
+// Retreives the HTML file for the desired menu section while clearing other sections
 function GetMenu( MenuFileName, OutputID )
 {
     TakeoutFocus();
@@ -26,11 +26,13 @@ function GetMenu( MenuFileName, OutputID )
     xmlhttp.send();
 }
 
+// allows item to be dragged from takeout menu into cart
 function StartDrag( CurrentEvent )
 {
     CurrentEvent.dataTransfer.setData( "text/html", CurrentEvent.target.id );
 }
 
+// allows item to be dragged from takeout menu into cart
 function AllowDrop( CurrentEvent )
 {
     CurrentEvent.preventDefault();
@@ -58,6 +60,7 @@ function TakeoutFocus()
     document.getElementById( 'drinks' ).innerHTML = "<li></li>";
 }
 
+// adds all of the prices in the cart section and outputs a total for the customer
 function CalculatePrice()
 {
     var PriceList = document.querySelectorAll( "ul[id=\"rightlist\"] li" );
