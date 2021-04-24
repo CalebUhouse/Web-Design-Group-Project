@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 18, 2021 at 11:32 PM
+-- Generation Time: Apr 24, 2021 at 05:13 PM
 -- Server version: 10.3.25-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -40,6 +40,15 @@ CREATE TABLE `menu_items` (
 --
 
 INSERT INTO `menu_items` (`id`, `category`, `description`, `price`) VALUES
+('item01', 'Appetizers', 'Bread Roll Basket - Comes with 4 buttered bread rolls', '1.00'),
+('item02', 'Appetizers', 'Family Bread Roll Basket - Comes with 6 buttered bread rolls', '1.50'),
+('item03', 'Appetizers', 'Garlic Breadsticks', '1.25'),
+('item04', 'Appetizers', 'Chicken Wings - one dozen wings: plain, mild, hot, BBQ w/ bleu cheese or ranch', '6.00'),
+('item10', 'Entrees', 'Signature Chicken Dinner', '7.00'),
+('item11', 'Entrees', 'Crispy Chicken', '4.00'),
+('item12', 'Entrees', 'Grilled Chicken', '3.00'),
+('item13', 'Entrees', 'Ranch Tavern Double', '6.00'),
+('item14', 'Entrees', 'Baked Mac & Cheese - served with creamy cheddar cheese, crispy bacon bits, and bread crumbs', '3.00'),
 ('item15', 'Kids Menu', 'Chicken Tenders', '4.00'),
 ('item16', 'Kids Menu', 'Hamburger', '4.00'),
 ('item17', 'Kids Menu', 'Hot Dog', '4.00'),
@@ -55,7 +64,6 @@ INSERT INTO `menu_items` (`id`, `category`, `description`, `price`) VALUES
 ('item32', 'Drinks', 'Coffee', '1.00'),
 ('item33', 'Drinks', 'Sweet Tea', '1.00'),
 ('item34', 'Drinks', 'Unsweetened Tea', '1.00');
-
 
 --
 -- Indexes for dumped tables
