@@ -47,7 +47,7 @@ INSERT INTO `menu_items` (`id`, `category`, `description`, `price`) VALUES
 ('item05', 'SnS', 'Grilled Chicken Caesar Salad - Romaine mix topped w/ caesar dressing, croutons, onions, and mozzarella cheese', '2.00'),
 ('item06', 'SnS', 'House Salad', '2.00'),
 ('item07', 'SnS', 'Greek Salad - mixed spring greens topped w/ kalamata olives, cucumber, pickled red onions, and feta, w/ greek dressing', '2.00'),
-('item08', 'SnS', 'Fench Onion Soup', '2.00'),
+('item08', 'SnS', 'French Onion Soup', '2.00'),
 ('item09', 'SnS', 'New England Clam Chowder Soup', '3.00'),
 ('item10', 'Entrees', 'Signature Chicken Dinner', '7.00'),
 ('item11', 'Entrees', 'Crispy Chicken', '4.00'),
