@@ -168,13 +168,13 @@ function Menu( $Category, $MenuType )
                 // add menu item with drag and drop data into takeout menu
                 // <li id="item01" class="item" draggable="true" ondragstart="StartDrag( event );" data-price="1.00">Bread Roll Basket - Comes with 4 buttered bread rolls<p>$1.00</p></li>
 
-                echo " id=\"".$Row[0]."\" class=\"item\" draggable=\"true\" ondragstart=\"StartDrag( event );\" data-price=\"".$Row[4]."\">".$Row[3]."<p>$".$Row[4]."</p></li>";
+                echo " id=\"".$Row[2]."\" class=\"item\" draggable=\"true\" ondragstart=\"StartDrag( event );\" data-price=\"".$Row[1]."\">".$Row[0]."<p>$".$Row[1]."</p></li>";
             }
             else
             {
                 // add menu item without drag and drop data into regular menu
                 // <li>Bread Roll Basket - Comes with 4 buttered bread rolls</li>
-                echo ">".$Row[3]."</li>";
+                echo ">".$Row[0]."</li>";
             }
           
         }
