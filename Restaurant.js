@@ -1,5 +1,5 @@
 // Retreives the HTML file for the desired menu section while clearing other sections
-function GetMenu( MenuFileName, OutputID )
+function GetMenu( Category, OutputID )
 {
     TakeoutFocus();
     var xmlhttp;
