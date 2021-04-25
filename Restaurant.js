@@ -12,6 +12,7 @@ function GetMenu( MenuFileName, OutputID )
     {
         xmlhttp = new ActiveXObject( "Microsoft.XMLHTTP" );
     }
+
     xmlhttp.onreadystatechange = function ()
     {
         if (( xmlhttp.readyState == 4 ) &&
@@ -21,9 +22,14 @@ function GetMenu( MenuFileName, OutputID )
         }
     }
 
-    xmlhttp.open( "GET", MenuFileName , true );
 
-    xmlhttp.send();
+    xmlhttp.open( "POST", "Takeout-Menu.php", true );
+
+    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+    var Argument = "Category=" + Category;    
+
+    xmlhttp.send( Argument );
 }
 
 // allows item to be dragged from takeout menu into cart
