@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `menu_items` (
   `id` varchar(50) NOT NULL,
   `category` varchar(50) NOT NULL,
-  `description` varchar(100) NOT NULL,
+  `description` varchar(200) NOT NULL,
   `price` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
