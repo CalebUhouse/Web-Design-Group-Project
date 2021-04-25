@@ -10,27 +10,27 @@
 
         <section>
             <p class="section-header top-header">Redrock Tavern Menu</p>
-            <p  class="menu-category" ondblclick="GetMenu('Takeout-Appetizers.html', 'appetizers');">Appetizers</p> 
+            <p  class="menu-category" ondblclick="GetMenu('Appetizers', 'appetizers');">Appetizers</p> 
             <ul id="appetizers" class="grid-container">
 
             </ul>
-            <p class="menu-category" ondblclick="GetMenu('Takeout-SnS.html', 'soups-and-salads');">Soups and Salads</p> 
+            <p class="menu-category" ondblclick="GetMenu('SnS', 'soups-and-salads');">Soups and Salads</p> 
             <ul id="soups-and-salads" class="grid-container">
 
             </ul>
-            <p class="menu-category" ondblclick="GetMenu('Takeout-Entrees.html', 'entrees');">Main Entrees</p>
+            <p class="menu-category" ondblclick="GetMenu('Entrees', 'entrees');">Main Entrees</p>
             <ul id="entrees" class="grid-container">
 
             </ul>
-            <p class="menu-category" ondblclick="GetMenu('Takeout-Kids-Menu.html', 'kids');">Kids Entrees</p>
+            <p class="menu-category" ondblclick="GetMenu('Kids Menu', 'kids');">Kids Entrees</p>
             <ul id="kids" class="grid-container">
 
             </ul>
-            <p class="menu-category" ondblclick="GetMenu('Takeout-Desserts.html', 'desserts');">Desserts</p>
+            <p class="menu-category" ondblclick="GetMenu('Desserts', 'desserts');">Desserts</p>
             <ul id="desserts" class="grid-container">
 
             </ul>
-            <p class="menu-category" ondblclick="GetMenu('Takeout-Drinks.html', 'drinks');">Drinks</p>
+            <p class="menu-category" ondblclick="GetMenu('Drinks', 'drinks');">Drinks</p>
             <ul id="drinks" class="grid-container">
 
             </ul>
