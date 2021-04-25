@@ -64,7 +64,7 @@ INSERT INTO `menu_items` (`id`, `category`, `description`, `price`) VALUES
 ('item22', 'Desserts', 'Chocolate Cake w/ Peanut Butter Icing', '4.00'),
 ('item23', 'Desserts', 'Brownie Sundae - brownie served w/ vanilla ice cream and topped w/ chocalate syrup and whipped cream', '4.00'),
 ('item24', 'Desserts', 'Cheesecake', '5.00'),
-('item25', 'Drinks', 'Water', '0.00 - bowl served with 3 scoops of ice cream of your choice: vanilla, chocolate, strawberry
+('item25', 'Drinks', 'Water', '0.00'),
 ('item26', 'Drinks', 'Lemonade', '1.00'),
 ('item27', 'Drinks', 'Raspberry Lemonade', '1.00'),
 ('item28', 'Drinks', 'Coke', '1.00'),
