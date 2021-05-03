@@ -76,6 +76,9 @@
             <div class="navigation-bar">
                 <a title="Contact Page" href="Takeout.php">Order Takeout</a>
             </div>
+            <div class="navigation-bar">
+                <a title="Register" href="Registration.php">Sign Up</a>
+            </div>
         </nav>
 
 <?php 
@@ -112,9 +115,9 @@
 <?php
     }
 
-function Menu( $Category, $MenuType )
+function DatabaseConnect()
 {
-    // set the connection information
+        // set the connection information
     //      dbase is the server name on the penguin network
     //      set the $UserName and $Password to your credentials.
     //      set the $Database to your penguin user name.
@@ -127,6 +130,32 @@ function Menu( $Category, $MenuType )
     //      create a new instance of a mysqli object. this
     //      object contains the connection to the mysql server
     $Connection = new mysqli( $Server, $UserName, $Password, $Database ); 
+
+    // check for a successful connection
+    //      connect_error will evaluate to true if there is an error
+    if ( $Connection->connect_error )
+    {
+        // stop the script and echo an error message
+        echo "<h2>Database Error</h2>\n";
+        die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
+    }
+
+
+    // return the connection
+    return $Connection;    
+}
+
+function Menu( $Category, $MenuType )
+{
+    // connect to database
+    $Connection = DatabaseConnect();
+
+    // make a select statement to get data from the database
+    $SQL = "select description, price, id from menu_items where category='".$Category."';";    
+    
+    // execute the query
+    //      use the query method of the $Connection object
+    $Results = $Connection->query( $SQL );
 
     // check for a successful connection
     //      connect_error will evaluate to true if there is an error
@@ -188,6 +217,54 @@ function Menu( $Category, $MenuType )
     
     // close the connection
     $Connection->close();
+
+}
+
+// insert data
+function InsertNewUser()
+{
+    // check to see if something was send via POST
+    if ( isset( $_POST["email"] ))
+    {
+
+        // connect to database
+        $Connection = DatabaseConnect();
+
+        // build the insert sql
+        $SQL = "insert into users( email, password, name, address, city, state, zip ) value (";
+        $SQL .= "\"".$_POST['email']."\"";
+        $SQL .= ",\"".$_POST['password']."\"";
+        $SQL .= ",\"".$_POST['name']."\"";
+        $SQL .= ",\"".$_POST['address']."\"";
+        $SQL .= ",\"".$_POST['city']."\"";
+        $SQL .= ",\"".$_POST['state']."\"";
+        $SQL .= ",\"".$_POST['zip']."\"";
+        $SQL .= ");";   
+        
+        // execute the insert
+        $Results = $Connection->query( $SQL );   
+        
+        // check for success
+        if ( $Results )
+        {
+            // go to index page 
+            header( "Location: Index.php" );
+        }
+        else
+        {
+            // go to registration page 
+            header( "Location: Registration.php" );
+        }  
+        
+        // close the connection
+        $Connection->close();        
+
+    }
+    else
+    {
+        // go to registration page 
+        header( "Location: Registration.php" );
+    }
 
 }
 
