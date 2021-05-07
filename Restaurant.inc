@@ -77,6 +77,9 @@
             <div class="navigation-bar">
                 <a title="Contact Page" href="Takeout.php">Order Takeout</a>
             </div>
+          <div class="navigation-bar">
+                <a title="Register" href="Registration.php">Sign Up</a>
+            </div>
             <div class="navigation-bar">
                 <?php
 
