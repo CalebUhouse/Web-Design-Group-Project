@@ -267,5 +267,36 @@ function InsertNewUser()
     }
 
 }
+function Login( $EMail, $Password )
+{
 
+        // connect to database
+        $Connection = DatabaseConnect();
+
+        // make a select statement to get data from the database
+        $SQL = "select first_name from users where email='".$EMail."' and password='".$Password."';";    
+        
+        // execute the query
+        //      use the query method of the $Connection object
+        $Results = $Connection->query( $SQL );
+    
+        // check for results
+        //      $Results will evaluate to true if there data is returned
+        //      from the database, false if no data is returned
+        if ( $Results )
+        {
+
+            // get frist record returned and save first name
+            $Row = $Results->fetch_row();
+            $_SESSION["first_name"] = $Row[0];
+
+            // go to home page 
+            header( "Location: index.php" );
+            exit();
+        }
+
+        // invalid login attempt
+        //      login page will continue to load
+
+}
 ?>
