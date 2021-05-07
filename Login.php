@@ -16,6 +16,7 @@
         <p>Password: <input name="password" type="password" required="true" /></p>
         <p><button type="submit">Log on</button></p>
         </form>
+      </section>
 
 
 <?php
