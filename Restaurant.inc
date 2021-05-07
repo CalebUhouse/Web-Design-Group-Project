@@ -50,6 +50,25 @@
         <p>
             2 Drinks for the price of 2 Drinks!
         </p>
+               <?php
+
+    if ( isset( $_SESSION["email"] ) )
+    {
+
+?>
+        <a class="section-header" href="Logout.php">Logout</a>
+<?php
+
+    }
+    else
+    {
+
+?>
+        <a class="section-header" href="Login.php">Login</a>
+
+<?php
+    }
+    ?>
     </aside>
 
 <?php 
@@ -269,14 +288,14 @@ function InsertNewUser()
     }
 
 }
-function Login( $EMail, $Password )
+function Login( $Email, $Password )
 {
 
         // connect to database
         $Connection = DatabaseConnect();
 
         // make a select statement to get data from the database
-        $SQL = "select first_name from users where email='".$EMail."' and password='".$Password."';";    
+        $SQL = "select first_name from users where email='".$Email."' and password='".$Password."';";    
         
         // execute the query
         //      use the query method of the $Connection object
