@@ -12,8 +12,8 @@
       <section>
         <p class="section-header top-header">WIP</p>
         <form action="Index.php" method="POST">
-      <p>Email Address: <input name="email" required="true"/></p>
-        <p>Password: <input name="password" type="password" required="true" /></p>
+      <p>Email: <input name="Email" type="email" required="true"/></p>
+        <p>Password: <input name="Password" type="password" required="true" /></p>
         <p><button type="submit">Log on</button></p>
         </form>
       </section>
