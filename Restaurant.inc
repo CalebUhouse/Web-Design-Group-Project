@@ -52,7 +52,7 @@
         </p>
                <?php
 
-    if ( isset( $_SESSION["email"] ) )
+    if ( isset( $_SESSION["first_name"] ) )
     {
 
 ?>
