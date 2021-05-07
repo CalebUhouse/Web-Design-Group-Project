@@ -80,26 +80,7 @@
                 <a title="Register" href="Registration.php">Sign Up</a>
               
             </div>
-        <div>
-        <?php
-
-    if ( isset( $_SESSION["first_name"] ) )
-    {
-
-?>
-        <a class="navitem" href="logout.php">Logout</a>
-<?php
-
-    }
-    else
-    {
-
-?>
-        <a class="navitem" href="login.php">Login</a>
-
-<?php
-    }
-?>
+       
         </nav>
 
 <?php 
