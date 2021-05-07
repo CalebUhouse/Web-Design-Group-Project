@@ -50,25 +50,7 @@
         <p>
             2 Drinks for the price of 2 Drinks!
         </p>
-               <?php
-
-    if ( isset( $_SESSION["first_name"] ) )
-    {
-
-?>
-        <a class="section-header" href="Logout.php">Logout</a>
-<?php
-
-    }
-    else
-    {
-
-?>
-        <a class="section-header" href="Login.php">Login</a>
-
-<?php
-    }
-    ?>
+               
     </aside>
 
 <?php 
@@ -96,7 +78,25 @@
                 <a title="Contact Page" href="Takeout.php">Order Takeout</a>
             </div>
             <div class="navigation-bar">
-                <a title="Register" href="Registration.php">Sign Up</a>
+                <?php
+
+    if ( isset( $_SESSION["first_name"] ) )
+    {
+
+?>
+        <a class="section-header" href="Logout.php">Logout</a>
+<?php
+
+    }
+    else
+    {
+
+?>
+        <a class="section-header" href="Login.php">Login</a>
+
+<?php
+    }
+    ?>
               
             </div>
        
