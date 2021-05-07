@@ -55,6 +55,16 @@ function Drop( CurrentEvent, DestinationID )
     CalculatePrice();
 }
 
+function Remove( Food )
+{
+    // "div[id=\"destination\"] div[id=\"" + Grade + "\"]" 
+    var ItemDestination = document.querySelector("ul[id=\"rightlist\"] li[id=\"" + Food + "\"]");
+
+    ItemDestination.parentNode.removeChild( ItemDestination );
+
+    CalculatePrice();
+}
+
 // Clears the other takeout boxes before executing the GetMenu function so that only one section displays at a time
 function TakeoutFocus() 
 {
