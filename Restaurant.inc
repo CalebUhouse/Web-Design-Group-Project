@@ -298,7 +298,7 @@ function Login( $Email, $Password )
         $Connection = DatabaseConnect();
 
         // make a select statement to get data from the database
-        $SQL = "select first_name from users where email='".$Email."' and password='".$Password."';";    
+        $SQL = "select email from users where email='".$Email."' and password='".$Password."';";    
         
         // execute the query
         //      use the query method of the $Connection object
@@ -312,7 +312,7 @@ function Login( $Email, $Password )
 
             // get frist record returned and save first name
             $Row = $Results->fetch_row();
-            $_SESSION["first_name"] = $Row[0];
+            $_SESSION["email"] = $Row[0];
 
             // go to home page 
             header( "Location: index.php" );
