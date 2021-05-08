@@ -112,6 +112,20 @@
     }
     function PageFooter()
     {
+
+    // check for a user
+    if ( isset( $_SESSION["name"] ))
+    {
+        // echo the current user
+        echo "   <p>Current User: ".$_SESSION["name"]."</p>\n";
+        echo "   <p><a href=\"Logout.php\">Log Out</a> when finished</p>\n";
+    }
+    else
+    {
+        // echo no login yet
+        echo "   <p>No user logged in</p>\n";
+        echo "   <p>Please <a href=\"Login.php\">Log in</a></p>\n";
+    } 
 ?>
       <footer>
          <p class="section-header">
@@ -328,18 +342,4 @@ function Login( $Email, $Password )
     }
 
 }
-function LoginName{
-    
-
-            if ( isset( $_SESSION["first_name"] ) )
-            {
-                echo "<p>WELCOME: ".$_SESSION["first_name"]."</p>\n";
-            }
-            else
-            {
-                echo "<p>PLEASE LOGIN IN</p>\n";
-            }
-}
-
-      
 ?>
