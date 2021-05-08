@@ -1,5 +1,7 @@
 <?php
-session_start();
+    // start the session
+    session_start();
+    
   // inserts the header container
   function HTMLHeader()
   {
@@ -78,13 +80,13 @@ session_start();
             <div class="navigation-bar">
                 <a title="Contact Page" href="Takeout.php">Order Takeout</a>
             </div>
-          <div class="navigation-bar">
+            <div class="navigation-bar">
                 <a title="Register" href="Registration.php">Sign Up</a>
             </div>
             <div class="navigation-bar">
                 <?php
 
-    if ( isset( $_SESSION["first_name"] ) )
+    if ( isset( $_SESSION["name"] ) )
     {
 
 ?>
@@ -299,7 +301,7 @@ function Login( $Email, $Password )
         $Connection = DatabaseConnect();
 
         // make a select statement to get data from the database
-        $SQL = "select email from users where email='".$Email."' and password='".$Password."';";    
+        $SQL = "select name from users where email='".$Email."' and password='".$Password."';";    
         
         // execute the query
         //      use the query method of the $Connection object
@@ -313,15 +315,17 @@ function Login( $Email, $Password )
 
             // get frist record returned and save first name
             $Row = $Results->fetch_row();
-            $_SESSION["email"] = $Row[0];
+            $_SESSION["name"] = $Row[0];
 
             // go to home page 
-            header( "Location: index.php" );
+            header( "Location: Index.php" );
             exit();
         }
-
-        // invalid login attempt
-        //      login page will continue to load
+        else
+    {
+        // go to registration page 
+        header( "Location: registration.php" );
+    }
 
 }
 ?>
