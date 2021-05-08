@@ -2,6 +2,14 @@
 
   require "Restaurant.inc";
 
+  // check for POST variables
+    if ( isset( $_POST["email"] ))
+    {
+        
+        Login( $_POST["email"], $_POST["password"] );
+        
+    }
+
   HTMLStart( "Login Page" );
 
   HTMLHeader();
