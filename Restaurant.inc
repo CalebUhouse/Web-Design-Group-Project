@@ -328,4 +328,18 @@ function Login( $Email, $Password )
     }
 
 }
+function LoginName{
+    
+
+            if ( isset( $_SESSION["first_name"] ) )
+            {
+                echo "<p>WELCOME: ".$_SESSION["first_name"]."</p>\n";
+            }
+            else
+            {
+                echo "<p>PLEASE LOGIN IN</p>\n";
+            }
+}
+
+      
 ?>
